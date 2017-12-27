@@ -19,8 +19,8 @@ import java.io.IOException;
  */
 public class MainActivity extends Activity {
 
-    Handler handler;
-    Bmx280 sensor;
+    private Handler handler;
+    private Bmx280 sensor;
     AlphanumericDisplay display;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
         try {
             sensor = RainbowHat.openSensor();
             display = RainbowHat.openDisplay();
+            handler = new Handler(getMainLooper());
 
             sensor.setMode(Bmx280.MODE_NORMAL);
             sensor.setTemperatureOversampling(Bmx280.OVERSAMPLING_1X);
