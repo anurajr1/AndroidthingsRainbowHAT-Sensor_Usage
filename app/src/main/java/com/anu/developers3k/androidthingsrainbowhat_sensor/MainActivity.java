@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
     private Handler handler;
     private Bmx280 sensor;
-    AlphanumericDisplay display;
+    private AlphanumericDisplay display;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
